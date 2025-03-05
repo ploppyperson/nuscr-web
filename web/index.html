@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script>
+        function rightClick() {
+            onGalleryClick(1);
+        }
+
+        function leftClick() {
+            onGalleryClick(-1);
+        }
+
+        function onGalleryClick(increment) {
+            for (const element of document.getElementsByClassName("picture-navigator")) {
+                var images = element.children[0].children;
+                var removed = 0;
+                for (var i = 0; i < images.length; i++) {
+                    if (images[i].classList.contains("picture-navigator-item-active")) {
+                        removed = i;
+                        images[i].classList.remove("picture-navigator-item-active");
+                        images[i].classList.add("picture-navigator-item-inactive");
+                        break;
+                    }
+                }
+                var toSet = removed + 1 === images.length ? 0 : i + 1;
+                if (increment < 0) {
+                    toSet = removed - 1 === -1 ? images.length - 1 : i - 1;
+                }
+                images[toSet].classList.add("picture-navigator-item-active");
+                images[toSet].classList.remove("picture-navigator-item-inactive");
+                //alert(children.length);
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="page">
+    <div class="saints">
+        <img src="PXL_20250228_121318193.jpg" alt="All Saints Church, Radford, viewed from the South East" style="object-position: 25% 50%">
+        <div class="user-content-container navigation-container container">
+            <div class="navigation">
+                <img src="logo_dynamic_hc.svg" alt="Logo" width="100" height="100"></img>
+            </div>
+        </div>
+    </div>
+    <div class="content-section">
+        <div class="user-content-container container">
+            <div class="user-content two-part-scale">
+                <div class="padded-content-item">
+                    <h1>The home of student bell-ringing in Nottingham</h1>
+                </div>
+                <div class="padded-content-item">
+                    <p>Founded in 1958, the Nottingham University Society of Change Ringers (NUSCR for short), is the
+                        student-run body for promoting campanology within the University of Nottingham.</p>
+                </div>
+            </div>
+        </div>
+        <div class="user-content-container container">
+            <div class="user-content">
+                <h1>What do we do?</h1>
+                <div class="info-panel info-panel-scale">
+                    <div class="info-panel-item info-panel-item-leftright">
+                        <h1>A</h1>
+                        We practice every Tuesday at 7:00pm in term time. This is in hope to make it for Sunday at
+                            10am.
+                    </div>
+                    <div class="info-panel-item info-panel-item-leftright">
+                        <h1>A</h1>
+                        Be social. We host socials, sometimes even including handbells. We also host a formal dinner
+                            once per year, with past and current students. It even includes a ceilidh.
+                    </div>
+                    <div class="info-panel-item-negate info-panel-item info-panel-item-leftright">
+                        <h1>A</h1>
+                        We do not ring the bells in the Trent Building, these are automated.
+                    </div>
+                    <div class="info-panel-item info-panel-item-leftright">
+                        <h1>A</h1>
+                        Go to the pub, and drink measurable amounts of alcohol. No pressure if you don't!
+                    </div>
+                    <div class="info-panel-item info-panel-item-leftright">
+                        <h1>A</h1>
+                        Go on tour! In summer, but also during the year we will go on tour. Recent summer tours
+                            include Liverpool, Lincolnshire and Surrey
+                    </div>
+                    <div class="info-panel-item-negate info-panel-item info-panel-item-leftright">
+                        <img src="religion.svg" alt="Religion">
+                        We do not practice religion. Even though you are situated within the confines of
+                            christianity, you do not need to pledge alliance to the cause.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-section">
+        <div class="user-content-container container">
+            <div class="user-content">
+                <h1>A word from our glorious leader...</h1>
+                <div class="two-part-scale">
+                    <div class="padded-content-item">
+                        <img src="joel.png" alt="Joel" width="216" height="205">
+                    </div>
+                    <div class="padded-content-item">
+                        Hi, I'm Joel! I am the current ringing master. I desperately need more pixels, and more ringers
+                        for that matter. You will meet me at some point.
+
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fringilla pulvinar lorem, a
+                        ornare turpis lobortis et. Maecenas ac blandit elit. Pellentesque quis porta nunc. Suspendisse
+                        eleifend varius suscipit. Cras lobortis ac metus sit amet commodo. Cras interdum mi quis auctor
+                        blandit. Praesent sem nulla, volutpat eu aliquet sed, commodo.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-section">
+        <div class="user-content-container container">
+            <div class="user-content">
+                <h1>Pictures of a past time</h1>
+                <div class="picture-navigator">
+                    <div class="picture-navigator-collection">
+                        <img src="PXL_20250228_113536852.jpg" class="picture-navigator-item-active">
+                        <img src="PXL_20250228_105400398.jpg" class="picture-navigator-item-inactive">
+                        <img src="PXL_20250228_105400398.jpg" class="picture-navigator-item-inactive">
+                        <img src="PXL_20250124_120029004.jpg" class="picture-navigator-item-inactive">
+                    </div>
+                    <button class="picture-navigator-button-right" id="button-right" onclick="rightClick()">></button>
+                    <button class="picture-navigator-button-left" id="button-left" onclick="leftClick()"><</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-section">
+        <div class="user-content-container container">
+            <div class="user-content">
+                <h1>More links...</h1>
+                <div class="link-panel">
+                    <div class="link-panel-item">
+                        <img src="PXL_20250228_115517632.jpg">
+                        <div class="link-panel-item-text">
+                            <b>Your first time</b>
+                            Interested? Why not give us a visit.
+                        </div>
+                    </div>
+                    <div class="link-panel-item">
+                        <img src="PXL_20250228_115352249.jpg">
+                        <div class="link-panel-item-text">
+                            <b>Squirrel</b>
+                            Text goes here
+                        </div>
+                    </div>
+                    <div class="link-panel-item">
+                        <img src="PXL_20250228_113536852.jpg">
+                        <div class="link-panel-item-text">
+                            <b>Canada goose</b>
+                            <p>Not sure what to put here</p>
+                        </div>
+                    </div>
+                    <div class="link-panel-item">
+                        <img src="PXL_20250228_115352249.jpg">
+                        <div class="link-panel-item-text">
+                            <b>Long nose nose nose nose nose</b>
+                            <p>Would you climb this ladder?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/nuscr.iml" filepath="$PROJECT_DIR$/.idea/nuscr.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/nuscr-website.iml" filepath="$PROJECT_DIR$/.idea/nuscr-website.iml" />
     </modules>
   </component>
