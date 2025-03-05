@@ -28,9 +28,10 @@ body {
 }
 
 .two-part, .two-part-scale {
-    display: grid;
-    column-gap: 0.5em;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 @media (max-width: 1000px) {
@@ -51,7 +52,8 @@ body {
     }
 
     .info-panel-scale, .two-part-scale{
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        text-align: center;
     }
 
     .link-panel {
