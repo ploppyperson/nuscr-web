@@ -116,6 +116,10 @@ body {
     padding: 1em;
 }
 
+.link-panel-item-text > p, .link-panel-item-text > h3 {
+    margin: 0;
+}
+
 .info-panel-item-negate {
     background-color: rgb(252, 185, 185);
 }
