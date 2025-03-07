@@ -113,7 +113,7 @@ body {
     padding: 0;
 }
 
-.info-panel-item-leftright {
+.info-panel-item {
     grid-template-columns: 1fr 2fr;
 }
 
