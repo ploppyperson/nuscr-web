@@ -20,23 +20,15 @@
 
         function onGalleryClick(increment) {
             for (const element of document.getElementsByClassName("picture-navigator")) {
-                var images = element.children[0].children;
-                var removed = 0;
-                for (var i = 0; i < images.length; i++) {
-                    if (images[i].classList.contains("picture-navigator-item-active")) {
-                        removed = i;
-                        images[i].classList.remove("picture-navigator-item-active");
-                        images[i].classList.add("picture-navigator-item-inactive");
-                        break;
-                    }
+                const imageContainer = element.children[0];
+                const parsedId = parseInt(imageContainer.dataset.imageIndex);
+                const nextId = parsedId + increment;
+                if (nextId === -1 || nextId === imageContainer.children.length) {
+                    return;
                 }
-                var toSet = removed + 1 === images.length ? 0 : i + 1;
-                if (increment < 0) {
-                    toSet = removed - 1 === -1 ? images.length - 1 : i - 1;
-                }
-                images[toSet].classList.add("picture-navigator-item-active");
-                images[toSet].classList.remove("picture-navigator-item-inactive");
-                //alert(children.length);
+                imageContainer.dataset.imageIndex = nextId;
+                imageContainer.style.right = nextId * 100 + '%';
+                //alert(parsedId + 'b' + nextId);
             }
         }
     </script>
@@ -105,11 +97,19 @@
             <div class="user-content">
                 <h1>Pictures of a past time</h1>
                 <div class="picture-navigator">
-                    <div class="picture-navigator-collection">
-                        <img src="PXL_20250228_113536852.jpg" class="picture-navigator-item-active">
-                        <img src="PXL_20250228_105400398.jpg" class="picture-navigator-item-inactive">
-                        <img src="PXL_20250228_105400398.jpg" class="picture-navigator-item-inactive">
-                        <img src="PXL_20250124_120029004.jpg" class="picture-navigator-item-inactive">
+                    <div class="picture-navigator-collection" data-image-index="0">
+                        <div class="picture-navigator-picture">
+                            <img src="PXL_20250228_113536852.jpg" alt="All saints 1">
+                        </div>
+                        <div class="picture-navigator-picture">
+                            <img src="PXL_20250228_105400398.jpg" alt="All saints 2">
+                        </div>
+                        <div class="picture-navigator-picture">
+                            <img src="PXL_20250228_121318193.jpg" alt="All saints 3">
+                        </div>
+                        <div class="picture-navigator-picture">
+                            <img src="PXL_20250124_120029004.jpg" alt="All saints 4">
+                        </div>
                     </div>
                     <button class="picture-navigator-button-right" id="button-right" onclick="rightClick()">></button>
                     <button class="picture-navigator-button-left" id="button-left" onclick="leftClick()"><</button>
