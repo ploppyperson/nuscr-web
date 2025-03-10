@@ -311,9 +311,12 @@ body {
         margin-right: 5vw;
     }
 
-    .info-panel-scale, .two-part-scale{
+    .info-panel-scale {
+        grid-template-columns: 1fr;
+    }
+
+    .two-part-scale{
         flex-direction: column;
-        text-align: center;
     }
 
     .link-panel {
@@ -327,6 +330,25 @@ body {
 
     .info-panel-item-negate {
         order: 1;
+    }
+
+    .interesting-image-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .five {
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    .six {
+        grid-column: 2;
+        grid-row: 5 / 7;
+    }
+
+    .seven {
+        grid-column:  1;
+        grid-row: 6;
     }
 
 }
