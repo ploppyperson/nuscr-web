@@ -9,54 +9,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            for (const element of document.getElementsByClassName("picture-navigator")) {
-                const right = element.getElementsByClassName("picture-navigator-button-right")[0];
-                const left = element.getElementsByClassName("picture-navigator-button-left")[0];
-                right.addEventListener("click", function() {
-                   rightClick(element);
-                });
-                left.addEventListener("click", function() {
-                    leftClick(element);
-                });
-                onGalleryClick(element, 0);
-            }
-        });
-
-        function rightClick(element) {
-            onGalleryClick(element, 1);
-        }
-
-        function leftClick(element) {
-            onGalleryClick(element, -1);
-        }
-
-        function onGalleryClick(element, increment) {
-            const imageContainer = element.children[0];
-            const parsedId = parseInt(imageContainer.dataset.imageIndex);
-            var nextId = parsedId + increment;
-            if (nextId === imageContainer.children.length) {
-                nextId = 0;
-            } else if (nextId === -1) {
-                nextId = imageContainer.children.length - 1;
-            }
-            imageContainer.dataset.imageIndex = nextId;
-            imageContainer.style.right = nextId * 100 + '%';
-            element.children[1].children[0].textContent = imageContainer.children[nextId].children[0].alt;
-            //alert(parsedId + 'b' + nextId);
-        }
-
-
-    </script>
+    <script src="script.js"></script>
 </head>
 <body>
 <div class="page">
     <div class="saints">
-        <img src="PXL_20250228_121318193.jpg" alt="All Saints Church, Radford, viewed from the South East" style="object-position: 25% 50%">
+        <img src="media/allsaints/PXL_20250228_121318193.jpg" alt="All Saints Church, Radford, viewed from the South East" style="object-position: 25% 50%">
         <div class="user-content-container navigation-container container">
             <div class="navigation">
-                <img src="logo_dynamic_hc.svg" alt="Logo" width="100" height="100"></img>
+                <img src="media/svg/logo_dynamic_hc.svg" alt="Logo" width="100" height="100"></img>
             </div>
         </div>
     </div>
@@ -101,7 +62,7 @@
                             include Liverpool, Lincolnshire and Surrey
                     </div>
                     <div class="info-panel-item-negate info-panel-item">
-                        <img src="religion.svg" alt="Religion">
+                        <img src="media/svg/religion.svg" alt="Religion">
                         We do not practice religion. Even though you are situated within the confines of
                             christianity, you do not need to pledge alliance to the cause.
                     </div>
@@ -115,25 +76,25 @@
                 <h1>Some pictures...</h1>
                 <div class="interesting-image-container">
                     <div class="one">
-                        <img src="PXL_20250228_121318193.jpg" alt="Scruffy, NUSCRs mascot">
+                        <img src="media/allsaints/PXL_20250228_121318193.jpg" alt="Scruffy, NUSCRs mascot">
                     </div>
                     <div class="two">
-                        <img src="PXL_20250228_105400398.jpg" alt="Scruffy, NUSCRs mascot">
+                        <img src="media/allsaints/PXL_20250228_105400398.jpg" alt="Scruffy, NUSCRs mascot">
                     </div>
                     <div class="three">
-                        <img src="PXL_20250306_110413764.jpg" alt="Scruffy, NUSCRs mascot">
+                        <img src="media/bells/PXL_20250306_110413764.jpg" alt="Scruffy, NUSCRs mascot">
                     </div>
                     <div class="four">
-                        <img src="PXL_20250228_105400398.jpg" alt="Scruffy, NUSCRs mascot">
+                        <img src="media/allsaints/PXL_20250228_105400398.jpg" alt="Scruffy, NUSCRs mascot">
                     </div>
                     <div class="five">
-                        <img src="PXL_20250306_112630901.jpg" alt="Scruffy, NUSCRs mascot">
+                        <img src="media/chamber/PXL_20250306_112630901.jpg" alt="Scruffy, NUSCRs mascot">
                     </div>
                     <div class="six">
-                        <img src="PXL_20250228_113536852.jpg" alt="Scruffy, NUSCRs mascot">
+                        <img src="media/allsaints/PXL_20250228_113536852.jpg" alt="Scruffy, NUSCRs mascot">
                     </div>
                     <div class="seven">
-                        <img src="PXL_20250228_121318193.jpg" alt="Scruffy, NUSCRs mascot">
+                        <img src="media/allsaints/PXL_20250228_121318193.jpg" alt="Scruffy, NUSCRs mascot">
                     </div>
                 </div>
             </div>
@@ -146,16 +107,16 @@
                 <div class="picture-navigator">
                     <div class="picture-navigator-collection" data-image-index="0">
                         <div class="picture-navigator-picture">
-                            <img src="PXL_20250228_113536852.jpg" alt="All saints 1">
+                            <img src="media/allsaints/PXL_20250228_113536852.jpg" alt="All saints 1">
                         </div>
                         <div class="picture-navigator-picture">
-                            <img src="PXL_20250228_105400398.jpg" alt="All saints 2">
+                            <img src="media/allsaints/PXL_20250228_105400398.jpg" alt="All saints 2">
                         </div>
                         <div class="picture-navigator-picture">
-                            <img src="PXL_20250228_121318193.jpg" alt="All saints 3">
+                            <img src="media/allsaints/PXL_20250228_121318193.jpg" alt="All saints 3">
                         </div>
                         <div class="picture-navigator-picture">
-                            <img src="PXL_20250124_120029004.jpg" alt="All saints 4">
+                            <img src="media/allsaints/PXL_20250124_120029004.jpg" alt="All saints 4">
                         </div>
                     </div>
                     <div class="picture-navigator-label-container">
@@ -179,7 +140,7 @@
                 <h1>A word from Scruffy...</h1>
                 <div class="two-part-scale">
                     <div class="padded-content-item">
-                        <img src="PXL_20250306_115312473~2.jpg" alt="Scruffy, NUSCRs mascot">
+                        <img src="media/chamber/PXL_20250306_115312473~2.jpg" alt="Scruffy, NUSCRs mascot">
                     </div>
                     <div class="padded-content-item">
                         <p>Hello, I'm Scruffy. As the NUSCR mascot my duties include following NUSCR on tours and
@@ -203,28 +164,28 @@
                 <h1>More links...</h1>
                 <div class="link-panel">
                     <div class="link-panel-item">
-                        <img src="PXL_20250228_115517632.jpg">
+                        <img src="media/allsaints/PXL_20250228_115517632.jpg">
                         <div class="link-panel-item-text">
                             <h3>Visit us</h3>
                             <p>Interested? Why not give us a visit.</p>
                         </div>
                     </div>
                     <div class="link-panel-item">
-                        <img src="PXL_20250306_110413764.jpg">
+                        <img src="media/bells/PXL_20250306_110413764.jpg">
                         <div class="link-panel-item-text">
                             <h3>History</h3>
                             <p>Bell tales</p>
                         </div>
                     </div>
                     <div class="link-panel-item">
-                        <img src="PXL_20250306_112630901.jpg">
+                        <img src="media/chamber/PXL_20250306_112630901.jpg">
                         <div class="link-panel-item-text">
                             <h3>Placeholder text</h3>
                             <p>Not sure what to put here</p>
                         </div>
                     </div>
                     <div class="link-panel-item">
-                        <img src="PXL_20250306_115624003.jpg">
+                        <img src="media/chamber/PXL_20250306_115624003.jpg">
                         <div class="link-panel-item-text">
                             <h3>Another placeholder</h3>
                             <p>With more placeholder text</p>
