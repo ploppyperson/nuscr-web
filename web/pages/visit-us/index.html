@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Title</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <script src="../../script.js"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+          crossorigin=""></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var map = L.map('map').setView([52.953237, -1.150217], 14);
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+      var marker = L.marker([52.960145, -1.161346]).addTo(map);
+      marker.bindPopup("All Saints Church").openPopup();
+    });
+  </script>
+</head>
+<body>
+<div class="page">
+  <div class="generic-header">
+    <img src="../../media/allsaints/PXL_20250228_105400398.jpg" alt="All Saints Church, Radford, viewed from the South East" style="object-position: 25% 50%">
+  </div>
+  <div class="user-content-container navigation-container container">
+    <div class="navigation">
+      <img src="../../media/svg/logo_dynamic_hc.svg" alt="Logo" width="100" height="100"></img>
+    </div>
+  </div>
+  <div class="content-section">
+    <div class="user-content-container container">
+      <div class="user-content">
+        <h1>How to find us?</h1>
+        <div class="fifty-fifty">
+          <div class="padded-content-item">
+            <div class="map-container" id="map"></div>
+          </div>
+          <div class="padded-content-item">
+            <p>Our practice is held at <time datetime="19:00">7:00PM</time> every Tuesday in term time. Ringing for Sunday service is at <time datetime="10:00">10:00AM</time>.</p>
+            <p>Address:</p>
+            <ul>
+              <li>All Saints' Church</li>
+              <li>Raleigh Street</li>
+              <li>The Park</li>
+              <li>Nottingham</li>
+              <li>NG7 4DL</li>
+            </ul>
+            <p>If you're a fresher, or simply unfamiliar with Nottingham, that may look far from campus. But fear not,
+              with Nottingham's public transport system you can use a combination of bus/tram and your legs. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
