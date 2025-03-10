@@ -39,43 +39,7 @@ body {
     margin: 1em;
 }
 
-@media (max-width: 1000px) {
-    .user-content-container {
-        margin-left: 10vw;
-        margin-right: 10vw;
-    }
 
-    .info-panel-scale {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .padded-content-item {
-        padding: 0.5em;
-        margin: 0.5em;
-    }
-}
-
-@media (max-width: 600px) {
-    .user-content-container {
-        margin-left: 5vw;
-        margin-right: 5vw;
-    }
-
-    .info-panel-scale, .two-part-scale{
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .link-panel {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .padded-content-item {
-        padding: 0.1em;
-        margin: 0.1em;
-    }
-
-}
 .saints {
     width: 100vw;
     height: 100vh;
@@ -319,4 +283,50 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     margin: 0;
+}
+
+@media (max-width: 1000px) {
+    .user-content-container {
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+    .info-panel-scale {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .padded-content-item {
+        padding: 0.5em;
+        margin: 0.5em;
+    }
+
+    .info-panel-item-negate {
+        order: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .user-content-container {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    .info-panel-scale, .two-part-scale{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .link-panel {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .padded-content-item {
+        padding: 0.1em;
+        margin: 0.1em;
+    }
+
+    .info-panel-item-negate {
+        order: 1;
+    }
+
 }
