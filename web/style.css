@@ -322,6 +322,77 @@ ul {
     list-style-type: none;
 }
 
+
+
+.grid-resizable > div {
+}
+
+.grid-resizable-title-left {
+    grid-area: AA;
+}
+
+.grid-resizable-title-right {
+    grid-area: BA;
+}
+
+.grid-resizable-5050-pic-1 {
+    grid-area: CA;
+}
+
+.grid-resizable-5050-text-1 {
+    grid-area: DA;
+}
+
+.grid-resizable-5050-pic-1r {
+    grid-area: CA1;
+}
+
+.grid-resizable-5050-text-1r {
+    grid-area: DA1;
+}
+
+.grid-resizable-5050-pic-2 {
+    grid-area: EA;
+}
+
+.grid-resizable-5050-text-2 {
+    grid-area: FA;
+}
+
+.grid-resizable-5050-pic-2r {
+    grid-area: EA1;
+}
+
+.grid-resizable-5050-text-2r {
+    grid-area: FA1;
+}
+
+.grid-resizable-bottom-a {
+    grid-area: GA;
+}
+
+.grid-resizable-bottom-b {
+    grid-area: HA;
+}
+
+.grid-resizable-bottom-c {
+    grid-area: IA;
+}
+
+.grid-resizable-bottom-d {
+    grid-area: JA;
+}
+
+.grid-resizable {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: fit-content(100%) auto;
+    grid-template-areas: "AA AA BA BA"
+                         "CA DA CA1 DA1"
+                         "EA FA EA1 FA1"
+                         "GA HA IA JA";
+}
+
 @media (max-width: 1000px) {
     .user-content-container {
         margin-left: 10vw;
@@ -394,6 +465,19 @@ ul {
 
     .fifty-fifty {
         grid-template-columns: 1fr;
+    }
+
+    .grid-resizable {
+        grid-gap: 1em;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "AA AA"
+                         "CA DA"
+                         "EA FA"
+                         "BA BA"
+                         "CA1 DA1"
+                         "EA1 FA1"
+                         "GA HA"
+                         "IA JA";
     }
 
 }
