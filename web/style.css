@@ -78,9 +78,7 @@ body {
     border-radius: 0.5em;
     background-color: #d7d7e2;
     padding: 1em;
-    display: grid;
     column-gap: 0.5em;
-    grid-template-columns: 1fr;
     overflow: hidden;
 }
 
@@ -104,6 +102,7 @@ body {
 }
 
 .info-panel-item {
+    display: grid;
     grid-template-columns: 1fr 2fr;
 }
 
