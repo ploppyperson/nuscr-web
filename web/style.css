@@ -32,16 +32,14 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
 }
 
 .fifty-fifty {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-}
-
-.padded-content-item {
-    padding: 1em;
-    margin: 1em;
+    column-gap: 2rem;
+    row-gap: 2rem;
 }
 
 .saints {
@@ -145,6 +143,10 @@ body {
 .container {
     /*border: 0px solid rgba(125, 125, 125, 0.63);*/
     border-radius: 0.5em;
+}
+
+.user-content {
+    padding: 2em;
 }
 
 .padded-content-item > img, .splice-two-img {
@@ -403,7 +405,7 @@ ul {
         grid-template-columns: 1fr 1fr;
     }
 
-    .padded-content-item {
+    .user-content {
         padding: 0.5em;
         margin: 0.5em;
     }
@@ -435,9 +437,9 @@ ul {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .padded-content-item {
-        padding: 0.1em;
-        margin: 0.1em;
+    .user-content {
+        padding: 0;
+        margin: 0;
     }
 
     .info-panel-item-negate {
