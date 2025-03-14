@@ -384,13 +384,19 @@ ul {
     grid-area: JA;
 }
 
+.grid-resizable-bottom-text{
+    grid-area: KK;
+}
+
 .grid-resizable {
     display: grid;
+    grid-gap: 2em;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: fit-content(100%) auto;
     grid-template-areas: "AA AA BA BA"
                          "CA DA CA1 DA1"
                          "EA FA EA1 FA1"
+                         "KK KK . ."
                          "GA HA IA JA";
 }
 
@@ -477,6 +483,7 @@ ul {
                          "BA BA"
                          "CA1 DA1"
                          "EA1 FA1"
+                         "KK KK"
                          "GA HA"
                          "IA JA";
     }
