@@ -148,10 +148,15 @@ body {
     padding: 2em;
 }
 
-.padded-content-item > img, .splice-two-img {
+.padded-content-item > img, .content-item > img {
     max-width: 100%;
     width: 50em;
     border-radius: 0.5em;
+}
+
+.padded-content-item {
+    display: block;
+    margin: auto;
 }
 
 .interesting-image-container > div {
@@ -313,7 +318,7 @@ body {
 }
 
 .map-container {
-    height: 50vh;
+    aspect-ratio: 1 / 1;
     width: 100%;
     border-radius: 0.5em;
     z-index: 1;
