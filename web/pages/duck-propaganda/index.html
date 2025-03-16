@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Title</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <script src="../../script.js"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+          crossorigin=""></script>
+  <script type="module">
+    import { parse } from './index.js'
+    function loadFile(filePath) {
+      var result = null;
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.open("GET", filePath, false);
+      xmlhttp.send();
+      if (xmlhttp.status === 200) {
+        result = xmlhttp.responseText;
+      }
+      return result;
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var map = L.map('map').setView([52.953237, -1.150217], 5);
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 14,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+      const file = loadFile("duck-info.csv");
+      var parsed = parse(file)
+      for (let i = 0; i < parsed.length; i++) {
+        const duck = parsed[i]
+        var marker = L.marker([duck[1], duck[2]]).addTo(map);
+        marker.bindPopup(duck[0]);
+      }
+      var marker = L.marker([52.960145, -1.161346]).addTo(map);
+      marker.bindPopup("All Saints Church").openPopup();
+    });
+  </script>
+</head>
+<body>
+<div class="page">
+  <div class="generic-header">
+    <div class="grid-header">
+      <img src="../../media/ducks/duck%203.jpg">
+      <img src="../../media/ducks/duck%201.jpg">
+      <img src="../../media/ducks/duck%2010.jpg">
+      <img src="../../media/ducks/duck%206.jpg">
+      <img src="../../media/ducks/duck%2011.jpg">
+      <img src="../../media/ducks/duck%209.jpg">
+      <img src="../../media/ducks/duck%205.jpg">
+      <img src="../../media/ducks/duck%202.jpg">
+      <img src="../../media/ducks/duck%2012.jpg">
+      <img src="../../media/ducks/duck%204.jpg">
+      <img src="../../media/ducks/duck%2013.jpg">
+      <img src="../../media/ducks/duck%2014.jpg">
+    </div>
+  </div>
+  <div class="user-content-container navigation-container container">
+    <div class="navigation">
+      <img src="../../media/svg/logo_dynamic_hc.svg" alt="Logo" width="100" height="100"></img>
+    </div>
+  </div>
+  <div class="content-section">
+    <div class="user-content-container container">
+      <div class="user-content">
+        <h1>Live Duck Map</h1>
+        <div class="two-part-scale">
+          <div class="map-container" id="map" style="max-height: 60vh;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

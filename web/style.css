@@ -51,13 +51,28 @@ body {
 .generic-header {
     width: 100vw;
     height: 60vh;
+    max-height: 60vh;
     position: relative;
+    overflow: hidden;
 }
 
 .saints > img, .generic-header > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.grid-header > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid-header {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 50%);
+    height: 100%;
 }
 
 .saint-drop {
@@ -427,6 +442,10 @@ ul {
     .fifty-fifty {
         grid-template-columns: 1fr;
     }
+
+    .grid-header {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 @media (max-width: 600px) {
@@ -491,6 +510,10 @@ ul {
                          "KK KK"
                          "GA HA"
                          "IA JA";
+    }
+
+    .grid-header {
+        grid-template-columns: repeat(3, 1fr);
     }
 
 }
