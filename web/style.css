@@ -181,6 +181,10 @@ body {
     margin: auto;
 }
 
+.content-item {
+    max-width: 100%;
+}
+
 .interesting-image-container > div {
     border-radius: 0.5em;
     overflow: hidden;
