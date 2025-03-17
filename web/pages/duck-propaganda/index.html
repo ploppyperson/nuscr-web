@@ -18,17 +18,6 @@
           crossorigin=""></script>
   <script type="module">
     import { parse } from '../../read-csv.js'
-    function loadFile(filePath) {
-      var result = null;
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.open("GET", filePath, false);
-      xmlhttp.send();
-      if (xmlhttp.status === 200) {
-        result = xmlhttp.responseText;
-      }
-      return result;
-    }
-
     document.addEventListener("DOMContentLoaded", function() {
       var map = L.map('map').setView([52.953237, -1.150217], 5);
       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
