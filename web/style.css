@@ -35,11 +35,18 @@ body {
     gap: 2rem;
 }
 
-.fifty-fifty {
+.fifty-fifty, .forty-sixty {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
     row-gap: 2rem;
+}
+
+.fifty-fifty {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.forty-sixty {
+    grid-template-columns: 0.4fr 0.6fr;
 }
 
 .saints {
@@ -427,6 +434,35 @@ ul {
                          "GA HA IA JA";
 }
 
+.display-table {
+    width: 100%;
+    text-align: left;
+    border-spacing: 0;
+    border-radius: 0.5em;
+    overflow: hidden;
+    border: 1px solid rgba(125, 125, 125, 0.63);
+}
+
+.display-table th:first-child, .display-table td:first-child {
+    padding-left: 0.4em;
+}
+
+.display-table th:last-child, .display-table td:last-child {
+    padding-right: 0.4em;
+}
+
+.display-table > thead {
+    background-color: rgba(142, 169, 195);
+}
+
+.display-table > tbody > tr:nth-child(even) {
+    background-color: rgb(187, 209, 239);
+}
+
+.display-table > tbody > tr:nth-child(odd) {
+    background-color: rgb(255, 255, 255);
+}
+
 @media (max-width: 1000px) {
     .user-content-container {
         margin-left: 10vw;
@@ -446,7 +482,7 @@ ul {
         order: 1;
     }
 
-    .fifty-fifty {
+    .fifty-fifty, .forty-sixty  {
         grid-template-columns: 1fr;
     }
 
@@ -501,7 +537,7 @@ ul {
         grid-row: 6;
     }
 
-    .fifty-fifty {
+    .fifty-fifty, .forty-sixty {
         grid-template-columns: 1fr;
     }
 

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Title</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <script src="../../script.js"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+          crossorigin=""></script>
+  <script type="module">
+    import { parse } from '../../read-csv.js'
+    document.addEventListener("DOMContentLoaded", function() {
+      for (const element of document.getElementsByClassName('display-table')) {
+        const file = loadFile(element.id + ".csv");
+        const parsedCSV = parse(file);
+        let items = "";
+        parsedCSV.forEach(item => {
+          let row = "<tr><td>" + item[0] + "</td>";
+          for (let i = 1; i < item.length; i++) {
+            row += "<td>" + item[i] + "</td>";
+          }
+          row += "</td>";
+          items += row;
+        });
+        element.innerHTML += "<tbody>" + items + "</tbody>";
+      }
+    });
+  </script>
+</head>
+<body>
+<div class="page">
+  <div class="generic-header">
+    <img src="../../media/people/dinner_comittee.JPG" alt="Past committee at 2025 NUSCR dinner" style="object-position: 50% 20%;">
+  </div>
+  <div class="user-content-container navigation-container container">
+    <div class="navigation">
+      <img src="../../media/svg/logo_dynamic_hc.svg" alt="Logo" width="100" height="100"></img>
+    </div>
+  </div>
+  <div class="content-section">
+    <div class="user-content-container container">
+      <div class="user-content">
+        <h1>Committee</h1>
+        <h2>Current committee</h2>
+        <div class="forty-sixty">
+          <div class="content-item">
+            <img src="../../media/people/117409735_301622071256491_8304639061683527872_n.jpg">
+            <p>Current Ringing Master, Joel Cairns</p>
+          </div>
+          <div class="content-item">
+            <table class="display-table" id="current_committee">
+              <thead>
+                <tr>
+                  <th>Role</th>
+                  <th>Name</th>
+                </tr>
+              </thead>
+
+            </table>
+          </div>
+        </div>
+        <h2>Past committee</h2>
+        <table class="display-table" id="past_committee">
+          <thead>
+          <tr>
+            <th>Year</th>
+            <th>Master</th>
+            <th>Secretary</th>
+            <th>Treasurer</th>
+          </tr>
+          </thead>
+
+        </table>
+        <h2>Honorary President</h2>
+        <div class="forty-sixty">
+          <div class="content-item">
+            <img src="../../media/people/dinner_president.JPG" alt="Honorary President">
+          </div>
+          <div class="content-item"><table class="display-table" id="honorary">
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Name</th>
+              </tr>
+            </thead>
+          </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
