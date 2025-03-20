@@ -106,7 +106,7 @@ body {
     margin-bottom: 0.25em;
 }
 
-.info-panel-item > p {
+.info-panel-item > p, .qa-box p {
     padding: 0;
     margin: 0;
 }
@@ -473,6 +473,23 @@ ul {
     text-align: center;
     width: 100%;
     font-style: italic;
+}
+
+.qa-box {
+    width: 100%;
+    border: 1px solid rgba(125, 125, 125, 0.63);
+    border-radius: 0.5em;
+    overflow: hidden;
+    margin-top: 2em;
+}
+
+.qa-box > div {
+    padding: 0.5em;
+}
+
+.qa-box-question {
+    border-bottom: 1px solid rgba(125, 125, 125, 0.63);
+    background-color: rgba(142, 169, 195);
 }
 
 @media (max-width: 1000px) {
