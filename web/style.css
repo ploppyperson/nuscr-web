@@ -168,7 +168,9 @@ body {
 }
 
 .user-content {
-    padding: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 4em;
 }
 
 .padded-content-item > img, .content-item > img {
@@ -267,8 +269,8 @@ body {
 
 .content-section {
     background: linear-gradient(to top, #ffffff 50%, #bbd1ef);
-    padding-top: 4em;
-    padding-bottom: 12em;
+    padding-top: 8em;
+    padding-bottom: 8em;
 }
 
 .picture-navigator-collection {
