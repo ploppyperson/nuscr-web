@@ -20,7 +20,7 @@
     <script type="module">
         import { parse } from './read-csv.js'
         document.addEventListener("DOMContentLoaded", function() {
-            var LeafIcon = L.Icon.extend({
+            var Icon = L.Icon.extend({
                 options: {
                     shadowUrl: '',
                     iconSize:     [38, 80],
@@ -31,8 +31,8 @@
                 }
             });
 
-            var darkIcon = new LeafIcon({iconUrl: 'media/svg/rubber-156597.svg'});
-            var lightIcon = new LeafIcon({iconUrl: 'media/svg/rubber-156597-2.svg'});
+            var darkIcon = new Icon({iconUrl: 'media/svg/rubber-156597.svg'});
+            var lightIcon = new Icon({iconUrl: 'media/svg/rubber-156597-2.svg'});
             var map = L.map('map').setView([52.953237, -1.150217], 5);
             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 14,
