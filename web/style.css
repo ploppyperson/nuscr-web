@@ -201,6 +201,39 @@ body {
     gap: 0.5em;
 }
 
+.dominant-image-container {
+    display: grid;
+    grid-template-areas: "a b b"
+    "a b b"
+    "c b b"
+    "c d e";
+
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+
+.dominant-image-container-a {
+    grid-area: a;
+}
+.dominant-image-container-b {
+    grid-area: b;
+}
+.dominant-image-container-c {
+    grid-area: c;
+}
+.dominant-image-container-d {
+    grid-area: d;
+}
+.dominant-image-container-f {
+    grid-area: f;
+}
+
+.dominant-image-container > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .interesting-image-container > div > img {
     width: 100%;
     height: 100%;
