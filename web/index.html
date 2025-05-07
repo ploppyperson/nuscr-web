@@ -8,52 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-          crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-            crossorigin=""></script>
-
     <script src="script.js"></script>
-    <script type="module">
-        import { parse } from './read-csv.js'
-        document.addEventListener("DOMContentLoaded", function() {
-            var Icon = L.Icon.extend({
-                options: {
-                    shadowUrl: '',
-                    iconSize:     [38, 80],
-                    shadowSize:   [50, 64],
-                    iconAnchor:   [19, 75],
-                    shadowAnchor: [4, 62],
-                    popupAnchor:  [-3, -76]
-                }
-            });
-
-            var darkIcon = new Icon({iconUrl: 'media/svg/rubber-156597.svg'});
-            var lightIcon = new Icon({iconUrl: 'media/svg/rubber-156597-2.svg'});
-            var map = L.map('map').setView([52.953237, -1.150217], 5);
-            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 14,
-                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-            }).addTo(map);
-            let marker = L.marker([52.960145, -1.161346], {icon: darkIcon}).addTo(map);
-            marker.bindPopup("All Saints Church").openPopup();
-            const file = loadFile("duck-info.csv");
-            const parsed = parse(file);
-            for (let i = 0; i < parsed.length; i++) {
-                const duck = parsed[i]
-                marker = L.marker([duck[0], duck[1]], {icon: lightIcon}).addTo(map);
-                let labelContent = "<b>" + duck[2] + "</b>";
-                for (let j = 3; j < duck.length; j++) {
-                    labelContent += "<br>" + duck[j];
-                }
-                marker.bindPopup(labelContent);
-            }
-
-        });
-    </script>
 </head>
 <body>
 <div class="page">
@@ -142,35 +97,6 @@
             </div>
         </div>
     </div>
-
-    <div class="content-section">
-        <div class="user-content-container container">
-            <div class="user-content">
-                <div class="fifty-fifty">
-                    <div class="map-container" id="map" style="width: 100%; height: 100%"></div>
-                    <div class="padded-content-item">
-                        <div style="height: 100%;">
-                            <h1>The Duck Agenda</h1>
-                            <p>In order to leave our mark, a duck is placed in every tower that NUSCR visits. The map shows
-                                every one that we know of. As you can see, we get around.</p>
-                        </div>
-                        <div class="grid-header">
-                            <img src="media/ducks/duck%203.jpg">
-                            <img src="media/ducks/duck%201.jpg">
-                            <img src="media/ducks/duck%2010.jpg">
-                            <img src="media/ducks/duck%206.jpg">
-                            <img src="media/ducks/duck%2011.jpg">
-                            <img src="media/ducks/duck%209.jpg">
-                            <img src="media/ducks/duck%205.jpg">
-                            <img src="media/ducks/duck%202.jpg">
-                            <img src="media/ducks/duck%204.jpg">
-                            <img src="media/ducks/duck%2014.jpg">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="content-section">
         <div class="user-content-container container">
             <div class="user-content">
@@ -204,6 +130,60 @@
                             <div class="qa-box-answer">
                                 <p>We do not practice or require religion. Even though you are situated within the
                                     confines of christianity, you do not need to pledge alliance to the cause.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <div class="user-content-container container">
+            <div class="user-content">
+                <div class="forty-sixty">
+                    <div class="padded-content-item">
+                        <img src="../../media/mascots/PXL_20250306_115312473~2.jpg" alt="Scruffy, NUSCRs mascot">
+                    </div>
+                    <div class="padded-content-item">
+                        <p>Hello, I'm Scruffy. </p>
+                        <p>All Saints' is my permanent residence, and has been for
+                            a long time. I don't do much ringing myself, but from my position within the ringing chamber I
+                            get to witness everyone else do so.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-section">
+        <div class="user-content-container container">
+            <div class="user-content">
+                <div class="forty-sixty">
+                    <div class="dominant-image-container">
+                        <div class="dominant-image-container-a">
+                            <img src="media/ducks/duck%203.jpg">
+                        </div>
+                        <div class="dominant-image-container-b">
+                            <img src="media/ducks/PXL_20250306_115947276~3.jpg">
+                        </div>
+                        <div class="dominant-image-container-c">
+                            <img src="media/ducks/duck%201.jpg">
+                        </div>
+                        <div class="dominant-image-container-d">
+                            <img src="media/ducks/duck%209.jpg">
+                        </div>
+                        <div class="dominant-image-container-e">
+                            <img src="media/ducks/duck%2011.jpg">
+                        </div>
+                    </div>
+                    <div class="padded-content-item">
+                        <div style="height: 100%;">
+                            <h1>The Duck Agenda</h1>
+                            <p>In order to leave our mark, a duck is placed in every tower that NUSCR visits. The map shows
+                                every one that we know of. As you can see, we get around.</p>
+                            <div class="content-button">
+                                View map
+                                <a class="image-link" href="pages/duck-map"></a>
                             </div>
                         </div>
                     </div>
@@ -252,7 +232,7 @@
                         </div>
                     </div>
                     <div class="link-panel-item">
-                        <a class="image-link" href="pages/mascots"></a>
+                        <a class="image-link" href="pages/duck-map"></a>
                         <img src="media/mascots/PXL_20250306_115624003.jpg">
                         <div class="link-panel-item-text">
                             <h3>Meet the mascots</h3>

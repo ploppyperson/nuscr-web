@@ -224,8 +224,8 @@ body {
 .dominant-image-container-d {
     grid-area: d;
 }
-.dominant-image-container-f {
-    grid-area: f;
+.dominant-image-container-e {
+    grid-area: e;
 }
 
 .dominant-image-container > div > img {
@@ -554,6 +554,20 @@ ul {
 .social-panel-item div img {
     height: 100%;
     width: 100%;
+}
+
+.content-button {
+    width: fit-content;
+    border-radius: 2em;
+    border: 1px solid rgba(125, 125, 125, 0.63);
+    background-color: #d7d7e2;
+    position: relative;
+    padding: 0.5em 1.5em;
+}
+
+.content-button:hover {
+    border: 1px solid rgba(0, 0, 0, 0.63);
+    transition: 0.20s;
 }
 
 @media (max-width: 1000px) {
