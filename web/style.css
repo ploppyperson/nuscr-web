@@ -300,10 +300,10 @@ body {
 }
 
 .footer {
-    margin-top: 4em;
+    margin-top: 2em;
     width: 100%;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-auto-rows: min-content;
 }
 
@@ -532,17 +532,17 @@ ul {
 
 .qa-box-question {
     border-bottom: 1px solid rgba(125, 125, 125, 0.63);
-    background-color: rgba(142, 169, 195);
+    background-color: #d7d7e2;
 }
 
 .social-panel {
-    display: grid;
-    width: 50%;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: right;
 }
 
 .social-panel-item {
     height: 100%;
+    width: 20%;
     aspect-ratio: 1 / 1;
     position: relative;
 }
