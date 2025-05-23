@@ -535,6 +535,10 @@ ul {
     background-color: #d7d7e2;
 }
 
+.qa-box-answer {
+    background-color: rgba(255, 255, 255, 0.80);
+}
+
 .social-panel {
     display: flex;
     justify-content: right;
