@@ -666,7 +666,7 @@ ul {
 }
 
 @media (min-width: 2000px) {
-    .user-content > div {
-        padding: 4em;
+    .user-content {
+        padding: 4vw;
     }
 }
