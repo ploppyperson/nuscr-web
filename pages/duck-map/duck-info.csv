@@ -1,20 +1,20 @@
-52.63474,-1.13703,Leicester,Cath Ch of St Martin,Leicestershire
+52.63474,-1.13703,Leicester,Cathedral Church of St Martin,Leicestershire
 52.64026,-1.13653,Leicester,St Margaret,Leicestershire
 52.63219,-1.14051,Leicester,St Mary de Castro,Leicestershire 
 51.55419,-2.57335,Almondsbury,St Mary Virigin,Gloucestershire 
 53.01109,-0.32982,Ewerby,St Andrew,Lincolnshire 
 52.95115,-1.14293,Nottingham,St Mary V,Nottinghamshire
 52.95222,-1.1488,Derby,St Luke,Derbyshire
-52.92478,-1.47779,Derby,Cath Ch of All Saints,Derbyshire
+52.92478,-1.47779,Derby,Cathedral Church of All Saints,Derbyshire
 52.92028,-1.4764,Derby,St Peter,Derbyshire
 52.95222,-1.1488,Nottingham,St Peter,Nottinghamshire
 53.41575,-2.76408,Rainhill,St Ann,Merseyside
 53.26164,0.18054,Alford,St Wilfrid,Lincolnshire
 52.93144,-1.27489,Stapleford,St Helen,Nottinghamshire
-52.95288,-1.22031,Wollaton,S Leonard,Nottinghamshire
-53.12703,-0.64464,Bassingham,S Michael & All Angels,Lincolnshire
+52.95288,-1.22031,Wollaton,St Leonard,Nottinghamshire
+53.12703,-0.64464,Bassingham,St Michael & All Angels,Lincolnshire
 53.33907,0.05236,Legbourne,All Saints,Lincolnshire
-53.79532,-1.53601,Leeds,Minster Ch of S Peter,West Yorkshire
+53.79532,-1.53601,Leeds,Minster Church of St Peter,West Yorkshire
 51.41171,-2.73039,Backwell,St Andrew,Somerset
 51.28773,-2.81653,Axbridge,St John Bapt,Somerset 
 53.40703,-2.9951,Liverpool,Our Lady & St Nicholas - Pier Head,Merseyside
@@ -36,11 +36,11 @@
 53.38312,-1.4692,Sheffield,Cath Ch of S Peter & S Paul,South Yorkshire
 53.43096,-1.35654,Rotherham,Minster Church of All Saints,South Yorkshire
 53.43401,-1.34923,Rotherham,St Anthony Coptic Orthodox Church,South Yorkshire
-51.38144,-2.35875,Bath,Abbey Ch of S Peter & S Paul,Somerset
+51.38144,-2.35875,Bath,Abbey Church of St Peter & S Paul,Somerset
 53.41611,-0.28899,Walesby,All Saints Old Church,Lincolnshire
 53.42898,-1.5997,Bradfield,St Nicholas,South Yorkshire
 52.15229,1.36392,Wickham Market,All Saints,Suffolk
-54.9716,-2.10259,Hexham,Abbey Ch of S Andrew,Northumberland
+54.9716,-2.10259,Hexham,Abbey Church of St Andrew,Northumberland
 54.9679,-1.86899,Ovingham,St Mary Virgin,Northumberland
 51.49801,-0.89603,Shiplake,St Peter & St Paul,Oxfordshire
 55.00374,-1.62477,Gosforth,All Saints,Northumberland
@@ -51,13 +51,19 @@
 51.14172,-0.48657,Cranleigh,St Nicolas,Surrey
 53.30517,-0.48383,Welton,St Mary,Lincolnshire
 51.69071,-1.24642,Radley,St James the Great,Oxfordshire
-51.90482,-0.52134,Houghton regis,All Saints,Central Bedfordshire
+51.90482,-0.52134,Houghton Regis,All Saints,Central Bedfordshire
 54.77351,-1.57616,Durham Cathedral,Durham,Durham
-51.87774,-0.56574,Totternhoe,St Giles,Central Bedfordshire
 52.36823,-2.71867,Ludlow,St Lawrence,Shropshire
 50.82463,-0.39591,West Tarring,St Andrews,West Sussex
 50.81297,-0.42479,Goring by Sea,St Mary's,West Sussex
 54.99681,-1.43737,South Shield,S Hilda,Tyne and Wear
 52.92542,-1.21675,Beeston,S John Bapt,Nottinghamshire
-51.45179,-2.60132,Bristol,Cath Church of Holy & Undivided Trinity,City of Bristol
+51.45179,-2.60132,Bristol,Cathedral Church of Holy & Undivided Trinity,City of Bristol
 54.97704,-1.82389,Wylam on Tyne,St Oswin,Northumberland
+51.15341,-0.34754,Ockley, St Margaret, Surrey
+51.23274,-0.33249,Dorking, St Martin, Surrey
+51.23364,-0.26734,Betchworth, St Michael & All Angels, Surrey
+51.26875,-0.15214,Merstham, St Katharine, Surrey
+51.16984,-0.17597,Horley, St Bartholomew, Surrey
+50.87451,-4.03676,Dowland, St Peter, Devon
+
